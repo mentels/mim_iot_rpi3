@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi3.Mixfile do
+defmodule MimIotRpi3.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,7 +6,7 @@ defmodule NervesSystemRpi3.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_rpi3,
+    [app: :mim_iot_rpi3,
      version: @version,
      elixir: "~> 1.3",
      compilers: Mix.compilers ++ [:nerves_package],
@@ -33,9 +33,9 @@ defmodule NervesSystemRpi3.Mixfile do
   end
 
   defp package do
-   [maintainers: ["Frank Hunleth", "Justin Schneck"],
+   [maintainers: ["Szymon Mentel"],
     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions", "fwup.conf", "cmdline.txt", "linux-4.4.defconfig", "config.txt", "post-createfs.sh"],
     licenses: ["Apache 2.0"],
-    links: %{"Github" => "https://github.com/nerves-project/nerves_system_rpi3"}]
+    links: %{"Github" => "https://github.com/mentels/mim_iot_rpi3"}]
   end
 end
